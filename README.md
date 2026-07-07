@@ -1,16 +1,51 @@
-# React + Vite
+# GitHub Profile Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React project that lets you search for any GitHub user and view their public profile information using the GitHub API.
 
-Currently, two official plugins are available:
+I built this project while learning React to get comfortable with working with APIs, asynchronous JavaScript, component-based development, and state management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+* Search for any GitHub username
+* Display profile information including:
+  * Avatar
+  * Name(link to original profile)
+  * Username
+  * Bio
+  * Followers
+  * Following
+  * Public repositories
+* Loading indicator while fetching data
+* Error message for invalid usernames
+* Clean and simple interface
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+* React
+* JavaScript (ES6+)
+* CSS
+* GitHub REST API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## What I Learned
+
+While building this project I practiced:
+
+* Creating reusable React components
+* Managing state with `useState`
+* Controlled inputs
+* Fetching data using `fetch()`
+* Using `async` / `await`
+* Handling loading and error states
+* Conditional rendering
+* Working with JSON data from an external API
+
+
+## Future Improvements
+
+* Search on pressing Enter
+* Display additional profile details like location and company
+* Improve the UI for mobile devices
+
+## Author
+
+**Isha Bisht**
