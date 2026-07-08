@@ -10,6 +10,12 @@ function App() {
   const [profile, setProfile] = useState(null);
   const[error, setError] =useState("");
   
+  function handleKeydown(e) {
+    if (e.key === "Enter")
+      handleClick();
+  }
+
+
   async function handleClick() {
    if(username) {setError("");
     setLoading(true);
@@ -48,7 +54,7 @@ function App() {
       <h1>
         ----------- GitHub Profile Finder -----------
       </h1>
-      <SearchBar username={username} handleInput={handleInput} handleClick={handleClick} />
+      <SearchBar username={username} handleInput={handleInput} handleKeydown={ handleKeydown} handleClick={handleClick} />
       <Profilecard profile={profile} loading={loading} error={error} />
     </>
   );
