@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import axios from 'axios'
 import './App.css'
 import SearchBar from './Searchbar';
 import Profilecard from './Profilecard'
@@ -20,20 +20,16 @@ function App() {
    if(username) {setError("");
     setLoading(true);
     try {
-      const response = await fetch(`https://api.github.com/users/${username}`);
-      if (response.ok) {
-        const data = await response.json();
+      const response = await axios.get(`https://api.github.com/users/${username}`);
+      
+        const data = await response.data;
       
         setProfile(data);
         
-      } else {
-        setError("No user found");
-        setProfile(null);
-      
-      }
-    } catch (err) {
+      }catch (err) {
       
       setError(err.message);
+      setProfile(null);
     } finally {
       setLoading(false);
     }
